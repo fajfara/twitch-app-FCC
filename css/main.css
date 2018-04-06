@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6441A4;
+    background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+    background-attachment: fixed;
+}
+
+.home-container{
+    text-align: center;
+    height: 590px;
+    background-attachment: fixed;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.home-container h1{
+    position: absolute;
+    width: 400px;
+    top: 20%;
+    left: 50%;
+    transform: translatex(-50%);
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color: #F7ECE1;
+    font-size: 4em;;
+    z-index: 1000;
+    background: #ED6A5A;
+
+}
+
+.tv-image{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gaming-hand img{
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    margin: 0 auto;
+    widtH: 50%;
+
+}
