@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Twitch view</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 <body>
-    <div class="home-container">
+    <div class="home-container" id="top-main">
         <div class="container">
             <h1>Twitch view</h1>
             <div class="tv-image">
@@ -18,6 +19,15 @@
                 <img src="images/game-hand.png" alt="game hand">
             </div>
         </div>
+    </div>
+    <div class="main-container">
+        <ul class="navbar" role="navigation">
+            <li class="live"><i class="fas fa-power-off bright"></i>Live</li>
+            <li><i class="fas fa-power-off less-bright"></i>Offline</li>
+            <li><i class="fas fa-reply-all bright"></i>All</li>
+            <li class="logo"><a href="#top-main"><i class="fas fa-play bright"></i></a></i></li>
+            <li class="search"><form class="rounded"><input placeholder="search channels"/><i class="fa fa-search bright"></i></form></li>
+          </ul>
     </div>
 
 </body>

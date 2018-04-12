@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+$dark-purple: #242038;
+$lighter-purple: #8d86c9;
+$main-purple: #6441a4;
+$grey-beige: #cac4ce;
+$light-beige: #f7ece1;
+$red-light: #ED6A5A;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $main-purple;
+    background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+    background-attachment: fixed;
+}
+
+.home-container{
+    text-align: center;
+    height: 590px;
+    background-attachment: fixed;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100vh;
+    & h1{
+        position: absolute;
+        width: 400px;
+        top: 10%;
+        left: 50%;
+        transform: translatex(-50%);
+        margin: 0 auto;
+        font-family: 'Roboto', sans-serif;
+        color: $light-beige;
+        font-size: 4em;;
+        z-index: 1000;
+        background: $red-light;
+    
+    }
+}
+
+
+
+.tv-image{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gaming-hand img{
+    position: absolute;
+    top: 53.5%;
+    left: 40%;
+    margin: 0 auto;
+    widtH: 40%;
+
+}
+
+.main-container {
+    height: 100vh;
+    width: 100%;
+    background:$lighter-purple;
+}
+
+.navbar {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: $light-beige;
+    background: $main-purple;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+
+    height: 46px;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+
+    & .live {
+        margin-left: 20px;
+    }
+
+    & li {
+        cursor: pointer;
+
+        &:not(:last-child):not(.logo) {
+            margin-right: 10px;
+        }
+    
+        & i:not(.fa-play):not(.fa-search){
+            margin-right: 7px;
+        }
+
+        &:not(.fas):hover {
+            color: $lighter-purple; 
+        }
+    }
+
+    
+
+    & .bright {
+        color: $light-beige;
+    }
+
+    & .less-bright {
+        color: $grey-beige;
+    }
+
+    & .logo {
+        margin-left: auto;
+        margin-right: auto;
+
+        & i:hover {
+            color: $lighter-purple; 
+        }
+    }
+
+    & .search {
+        & i {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
