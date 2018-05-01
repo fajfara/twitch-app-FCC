@@ -6,6 +6,15 @@ $grey-beige: #cac4ce;
 $light-beige: #f7ece1;
 $red-light: #ED6A5A;
 
+
+.grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,19 +25,20 @@ body {
     background-color: $main-purple;
     background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
     background-attachment: fixed;
+    font-size: 100%;
 }
 
 .home-container{
     text-align: center;
-    height: 590px;
+    height: 59rem;
     background-attachment: fixed;
-    max-width: 960px;
+    max-width: 96rem;
     margin: 0 auto;
     height: 100vh;
     & h1{
         position: absolute;
         width: 400px;
-        top: 10%;
+        top: 20%;
         left: 50%;
         transform: translatex(-50%);
         margin: 0 auto;
@@ -37,30 +47,57 @@ body {
         font-size: 4em;;
         z-index: 1000;
         background: $red-light;
-    
+
+    }
+}
+
+.tv-image {
+    width: 20%;
+    height: 25rem;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+
+    & .tv-retro {
+        width: 100%;
+        position: relative;
+        top: 70%;
+
+        & #retro-tv {
+            width: 100%;
+            position: absolute;
+            left: -50%;
+            transform: translateX(50%);
+            z-index: 10;
+        }
+
+        & #crt-lines {
+            width: 67%;
+            position: absolute;
+            top: 1rem;
+            right: 60%;
+            transform: translateX(50%);
+            z-index: 1;
+        }
     }
 }
 
 
-
-.tv-image{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .gaming-hand img{
     position: absolute;
-    top: 53.5%;
+    top: 60%;
     left: 40%;
     margin: 0 auto;
-    widtH: 40%;
+    width: 40%;
+    z-index: -1;
 
 }
 
+// Main styling and navbar
+
 .main-container {
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 2rem;
     width: 100%;
     background:$lighter-purple;
 }
@@ -74,7 +111,9 @@ body {
     list-style-type: none;
     display: flex;
 
-    height: 46px;
+    font-size: 1.3rem;
+
+    height: 100%;
     align-items: center;
     padding: 0 10px;
     box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
@@ -85,6 +124,7 @@ body {
 
     & li {
         cursor: pointer;
+        padding: 1rem;
 
         &:not(:last-child):not(.logo) {
             margin-right: 10px;
@@ -95,7 +135,27 @@ body {
         }
 
         &:not(.fas):hover {
-            color: $lighter-purple; 
+            color: $lighter-purple;
+        }
+    }
+
+    & li:nth-child(1):hover{
+        background-color: $light-beige;
+
+        & i {
+            color: $lighter-purple;
+        }
+    }
+
+    & li:nth-child(2):hover{
+        background-color: $light-beige;
+    }
+
+    & li:nth-child(3):hover{
+        background-color: $light-beige;
+
+        & i {
+            color: $lighter-purple;
         }
     }
 
@@ -110,8 +170,8 @@ body {
     }
 
     & .logo {
-        margin-left: auto;
-        margin-right: auto;
+        position: absolute;
+        left: 50%;
 
         & i:hover {
             color: $lighter-purple; 
@@ -119,6 +179,20 @@ body {
     }
 
     & .search {
+        position: absolute;
+        left: 85%;
+        &__input {
+            border: none;
+            border-radius: 100px;
+            padding: .2rem 1rem;
+            width: 90%;
+            transition: all .2s;
+
+            &:focus {
+                outline: none;
+                width: 100%;
+            }
+        }
         & i {
             margin-left: 10px;
             margin-right: 10px;
@@ -130,3 +204,119 @@ body {
     border-radius: 15px;
 }
 
+///////////////////////////////////////////////
+// Content and grid for displaying channels //
+/////////////////////////////////////////////
+
+.content {
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 90rem;
+}
+
+// The grid styling
+// Channel card styling
+.channel {
+    background-color: $light-beige;
+    box-shadow: 1px 3px 1rem $dark-purple, 0 1px 2px $dark-purple;
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    border-radius: 2px;
+
+    &:hover {
+        box-shadow: 0 5px 28px $dark-purple, 0 5px 10px $dark-purple;
+    }
+
+    &__header {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+
+        &--logo {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+        }
+
+        &--name {
+            margin-left: 2.6rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: $main-purple;
+            text-transform: uppercase;
+        }
+
+    }
+
+    &__info {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        .wrapper {
+            font-size: 1.2rem;
+            color: $main-purple;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            display: grid;
+            width: 70%;
+            height: 100%;
+            margin: 0 auto;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 2, 1fr;
+
+            &--number {
+                margin: 0 auto;
+                color: $dark-purple;
+                font-weight: 400;
+                
+            }
+            &--icon {
+                width: 2rem;
+                height: 2rem;
+                margin: 0 auto;
+                -webkit-filter: drop-shadow( 3px 5px rgba($dark-purple, .5) ); 
+                filter: drop-shadow( 3px 4px rgba($dark-purple, .5) );
+                
+            }
+
+        }
+
+
+    }
+
+    &__supp-actions{
+        height: 100%;
+        
+        .wrapper-actions {
+            display: flex;
+            width: 100%;
+            &--button {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                color: $light-beige;
+                background-color: $main-purple;
+                padding: 1rem;
+                float: right;
+                width: 100%;
+                text-align: center;
+
+                &:hover {
+                    transform: translateY(-.1rem);
+                    box-shadow: 0 2px $dark-purple;
+                }
+            }
+        }
+    }
+
+}
+
+.online {
+    fill: green;
+}
+
+.offline {
+    fill: red;
+}

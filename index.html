@@ -13,7 +13,10 @@
         <div class="container">
             <h1>Twitch view</h1>
             <div class="tv-image">
-                <img src="images/retro-tv.gif" alt="retro tv">
+                <div class="tv-retro">
+                    <img id="retro-tv" src="images/tv-svg.svg" alt="retro tv">
+                    <img id="crt-lines" src="images/crt-gif.gif" alt="crt effect gif">
+                </div>
             </div>
             <div class="gaming-hand">
                 <img src="images/game-hand.png" alt="game hand">
@@ -22,13 +25,74 @@
     </div>
     <div class="main-container">
         <ul class="navbar" role="navigation">
-            <li class="live"><i class="fas fa-power-off bright"></i>Live</li>
-            <li><i class="fas fa-power-off less-bright"></i>Offline</li>
-            <li><i class="fas fa-reply-all bright"></i>All</li>
-            <li class="logo"><a href="#top-main"><i class="fas fa-play bright"></i></a></i></li>
-            <li class="search"><form class="rounded"><input placeholder="search channels"/><i class="fa fa-search bright"></i></form></li>
-          </ul>
-    </div>
+            <li class="live">
+                <i class="fas fa-power-off bright"></i>
+                Live
+            </li>
 
+            <li>
+                <i class="fas fa-power-off less-bright"></i>
+                Offline
+            </li>
+
+            <li>
+                <i class="fas fa-reply-all bright"></i>
+                All
+            </li>
+
+            <li class="logo">
+                <a href="#top-main">
+                    <i class="fas fa-play bright">
+                    </i>
+                </a>
+            </li>
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search for channel">
+            </form>
+        </ul>
+
+        <div class="content">
+            <div class="grid">
+                <div class="channel">
+                    <div class="channel__header">
+                        <img class="channel__header--logo" src="images/placeholder-logo.png" alt="Logo of channel">
+                        <h1 class="channel__header--name">Placeholder name</h1>
+                    </div>
+
+                    <div class="channel__banner">
+                        <img class="channel__banner--banner" src="images/placeholder-banner.png" alt="Banner of the channel">
+                    </div>
+                    
+                    <div class="channel__info">
+                        <div class="wrapper">
+                                <p class="wrapper--followers">Followers:</p>
+                                <span class="wrapper--number">12456</span>
+                                <p class="wrapper--status">
+                                    Online: 
+                                </p>
+                                
+                                <svg class="wrapper--icon">
+                                    <use class="online" xlink:href="images/icons.svg#icon-checkmark"></use>
+                                </svg>
+                        </div>
+                        
+                    </div>
+
+                    <div class="channel__supp-actions">
+                        <div class="wrapper-actions">
+                            <a class="wrapper-actions--button" href="#">
+                                Check it out!
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 </html>
